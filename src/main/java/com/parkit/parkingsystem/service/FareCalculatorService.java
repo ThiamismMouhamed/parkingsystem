@@ -3,7 +3,12 @@ package com.parkit.parkingsystem.service;
 import com.parkit.parkingsystem.constants.Fare;
 import com.parkit.parkingsystem.model.Ticket;
 
+import java.sql.Connection;
+
 public class FareCalculatorService {
+
+
+
 
     public void calculateFare(Ticket ticket){
         if( (ticket.getOutTime() == null) || (ticket.getOutTime().before(ticket.getInTime())) ){
@@ -18,11 +23,19 @@ public class FareCalculatorService {
 
         switch (ticket.getParkingSpot().getParkingType()){
             case CAR: {
+                if(duration<=30){
+                    ticket.setPrice(0);
+                }else {
                 ticket.setPrice(duration * Fare.CAR_RATE_PER_HOUR);
+                }
                 break;
             }
             case BIKE: {
+                if(duration<=30){
+                    ticket.setPrice(0);
+                }else {
                 ticket.setPrice(duration * Fare.BIKE_RATE_PER_HOUR);
+                }
                 break;
             }
             default: throw new IllegalArgumentException("Unkown Parking Type");
