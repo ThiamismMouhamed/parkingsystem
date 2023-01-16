@@ -8,10 +8,9 @@ import com.parkit.parkingsystem.model.Ticket;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Timestamp;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class TicketDAO {
 
@@ -85,5 +84,37 @@ public class TicketDAO {
             dataBaseConfig.closeConnection(con);
         }
         return false;
+    }
+
+    public boolean isRegularCustumer(String matricule){
+        Connection con;
+
+        boolean isRegular = false;
+        List<String> vehiculesRegNumbers = new ArrayList<String>();
+        try{
+            con = dataBaseConfig.getConnection();
+            String sql = "SELECT vehicleRegNumber FROM Ticket";
+            PreparedStatement ps = con.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+           while (rs.next()){
+               String vehicleRegNumber = rs.getString("vehicleRegNumber");
+              vehiculesRegNumbers.add(vehicleRegNumber);
+           }
+           int cmpt =0;
+           for (  String item: vehiculesRegNumbers){
+               if (matricule == item){
+                   cmpt ++;
+               }
+           }
+           if (cmpt > 2 ){
+               isRegular = true;
+           }
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+        return isRegular;
     }
 }

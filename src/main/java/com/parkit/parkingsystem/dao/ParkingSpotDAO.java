@@ -4,12 +4,14 @@ import com.parkit.parkingsystem.config.DataBaseConfig;
 import com.parkit.parkingsystem.constants.DBConstants;
 import com.parkit.parkingsystem.constants.ParkingType;
 import com.parkit.parkingsystem.model.ParkingSpot;
+import com.parkit.parkingsystem.model.Ticket;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class ParkingSpotDAO {
     private static final Logger logger = LogManager.getLogger("ParkingSpotDAO");
@@ -55,5 +57,17 @@ public class ParkingSpotDAO {
             dataBaseConfig.closeConnection(con);
         }
     }
+
+    //tester si le véhicule à été dans le parking au moins une fois
+   /* public boolean hasBeenInParking(Ticket ticket) {
+        List<Ticket> parkingHistory = "query pour selectionner les ticket";
+        for (Vehicle v : parkingHistory) {
+            if (v.equals(vehicle)) {
+                return true;
+            }
+        }
+        return false;
+    }*/
+
 
 }
