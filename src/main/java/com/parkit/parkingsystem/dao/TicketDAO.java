@@ -88,33 +88,28 @@ public class TicketDAO {
 
     public boolean isRegularCustumer(String matricule){
         Connection con;
-
-        boolean isRegular = false;
         List<String> vehiculesRegNumbers = new ArrayList<String>();
         try{
             con = dataBaseConfig.getConnection();
-            String sql = "SELECT vehicleRegNumber FROM Ticket";
+            String sql = "SELECT * FROM ticket ";
             PreparedStatement ps = con.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
            while (rs.next()){
-               String vehicleRegNumber = rs.getString("vehicleRegNumber");
+               String vehicleRegNumber = rs.getString("VEHICLE_REG_NUMBER");
               vehiculesRegNumbers.add(vehicleRegNumber);
            }
-           int cmpt =0;
+            System.out.println("matricule:"+matricule+ ",vehicleRegNumbers:"+vehiculesRegNumbers);
            for (  String item: vehiculesRegNumbers){
-               if (matricule == item){
-                   cmpt ++;
+               if (item.equals(matricule)){
+                System.out.println("hello");
+                 return true;
                }
            }
-           if (cmpt > 2 ){
-               isRegular = true;
-           }
-
         } catch (SQLException e) {
             throw new RuntimeException(e);
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
-        return isRegular;
+        return false;
     }
 }
