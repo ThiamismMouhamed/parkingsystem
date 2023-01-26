@@ -67,8 +67,18 @@ public class ParkingDataBaseIT {
     public void testParkingLotExit(){
         testParkingACar();
         ParkingService parkingService = new ParkingService(inputReaderUtil, parkingSpotDAO, ticketDAO);
+
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         parkingService.processExitingVehicle();
         //TODO: check that the fare generated and out time are populated correctly in the database
+        Ticket ticket = ticketDAO.getTicket("ABCDEF");
+
+        Assert.assertNotNull(ticket.getPrice());
+        Assert.assertNotNull(ticket.getOutTime());
     }
 
 }

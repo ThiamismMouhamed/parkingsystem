@@ -13,7 +13,7 @@ public class DataBaseConfig {
         logger.info("Create DB connection");
         Class.forName("com.mysql.cj.jdbc.Driver");
         return DriverManager.getConnection(
-                "jdbc:mysql://127.0.0.1:8889/prod","root","root");
+                "jdbc:mysql://127.0.0.1:8889/test","root","root");
     }
 
     public void closeConnection(Connection con){
