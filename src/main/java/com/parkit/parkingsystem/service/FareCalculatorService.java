@@ -5,20 +5,27 @@ import com.parkit.parkingsystem.dao.TicketDAO;
 import com.parkit.parkingsystem.model.Ticket;
 
 public class FareCalculatorService {
-    private TicketDAO ticketDAO;
+    //private TicketDAO ticketDAO;
     float resultTime;
-    public void calculateFare(Ticket ticket){
+
+
+
+    public void calculateFare(Ticket ticket, TicketDAO ticketDAO){
         if( (ticket.getOutTime() == null) || (ticket.getOutTime().before(ticket.getInTime())) ){
             throw new IllegalArgumentException("Out time provided is incorrect:"+ticket.getOutTime().toString());
         }
         Long inHour = ticket.getInTime().getTime();
         Long outHour = ticket.getOutTime().getTime();
 
+        int THIRTY_MINUTES = 1800000; // 30 * 60 * 1000
+        int HOUR = 1440000; // 24 * 60 * 1000
+        int TWINTY_FOUR_HOURE = 1440000; // 24 * 60 * 60 * 1000
+
         //TODO: Some tests are failing here. Need to check if this logic is correct
         Long duration = outHour - inHour;
 
         //Test sur la durée
-        if(duration < ((30 * 60 * 1000))){
+        if(duration < THIRTY_MINUTES){
             resultTime = 0;
         }else {
             resultTime = ((((float) duration / 1000) / 60) / 60);

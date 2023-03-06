@@ -58,16 +58,6 @@ public class ParkingSpotDAO {
         }
     }
 
-    //tester si le véhicule à été dans le parking au moins une fois
-   /* public boolean hasBeenInParking(Ticket ticket) {
-        List<Ticket> parkingHistory = "query pour selectionner les ticket";
-        for (Vehicle v : parkingHistory) {
-            if (v.equals(vehicle)) {
-                return true;
-            }
-        }
-        return false;
-    }*/
 
 
 }
