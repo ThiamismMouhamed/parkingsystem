@@ -1,4 +1,260 @@
 -------------------------------------------------------------------------------
 Test set: com.parkit.parkingsystem.ParkingServiceTest
 -------------------------------------------------------------------------------
-Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.014 s - in com.parkit.parkingsystem.ParkingServiceTest
+Tests run: 8, Failures: 0, Errors: 8, Skipped: 0, Time elapsed: 3.4 s <<< FAILURE! - in com.parkit.parkingsystem.ParkingServiceTest
+processIncomingBikeWithDiscount  Time elapsed: 2.373 s  <<< ERROR!
+org.mockito.exceptions.base.MockitoException: 
+
+Mockito cannot mock this class: class com.parkit.parkingsystem.util.InputReaderUtil.
+
+If you're not sure why you're getting this error, please report to the mailing list.
+
+
+Java               : 19
+JVM vendor name    : Oracle Corporation
+JVM vendor version : 19.0.2+7-44
+JVM name           : OpenJDK 64-Bit Server VM
+JVM version        : 19.0.2+7-44
+JVM info           : mixed mode, sharing
+OS name            : Mac OS X
+OS version         : 13.2.1
+
+
+You are seeing this disclaimer because Mockito is configured to create inlined mocks.
+You can learn about inline mocks and their limitations under item #39 of the Mockito class javadoc.
+
+Underlying exception : org.mockito.exceptions.base.MockitoException: Could not modify all classes [class java.lang.Object, class com.parkit.parkingsystem.util.InputReaderUtil]
+Caused by: org.mockito.exceptions.base.MockitoException: Could not modify all classes [class java.lang.Object, class com.parkit.parkingsystem.util.InputReaderUtil]
+Caused by: java.lang.IllegalStateException: 
+
+Byte Buddy could not instrument all classes within the mock's type hierarchy
+
+This problem should never occur for javac-compiled classes. This problem has been observed for classes that are:
+ - Compiled by older versions of scalac
+ - Classes that are part of the Android distribution
+Caused by: java.lang.IllegalArgumentException: Java 19 (63) is not supported by the current version of Byte Buddy which officially supports Java 18 (62) - update Byte Buddy or set net.bytebuddy.experimental as a VM property
+
+processExitingVehicleException  Time elapsed: 0.122 s  <<< ERROR!
+org.mockito.exceptions.base.MockitoException: 
+
+Mockito cannot mock this class: class com.parkit.parkingsystem.util.InputReaderUtil.
+
+If you're not sure why you're getting this error, please report to the mailing list.
+
+
+Java               : 19
+JVM vendor name    : Oracle Corporation
+JVM vendor version : 19.0.2+7-44
+JVM name           : OpenJDK 64-Bit Server VM
+JVM version        : 19.0.2+7-44
+JVM info           : mixed mode, sharing
+OS name            : Mac OS X
+OS version         : 13.2.1
+
+
+You are seeing this disclaimer because Mockito is configured to create inlined mocks.
+You can learn about inline mocks and their limitations under item #39 of the Mockito class javadoc.
+
+Underlying exception : org.mockito.exceptions.base.MockitoException: Could not modify all classes [class java.lang.Object, class com.parkit.parkingsystem.util.InputReaderUtil]
+Caused by: org.mockito.exceptions.base.MockitoException: Could not modify all classes [class java.lang.Object, class com.parkit.parkingsystem.util.InputReaderUtil]
+Caused by: java.lang.IllegalStateException: 
+
+Byte Buddy could not instrument all classes within the mock's type hierarchy
+
+This problem should never occur for javac-compiled classes. This problem has been observed for classes that are:
+ - Compiled by older versions of scalac
+ - Classes that are part of the Android distribution
+Caused by: java.lang.IllegalArgumentException: Java 19 (63) is not supported by the current version of Byte Buddy which officially supports Java 18 (62) - update Byte Buddy or set net.bytebuddy.experimental as a VM property
+
+processIncomingBikeFail  Time elapsed: 0.123 s  <<< ERROR!
+org.mockito.exceptions.base.MockitoException: 
+
+Mockito cannot mock this class: class com.parkit.parkingsystem.util.InputReaderUtil.
+
+If you're not sure why you're getting this error, please report to the mailing list.
+
+
+Java               : 19
+JVM vendor name    : Oracle Corporation
+JVM vendor version : 19.0.2+7-44
+JVM name           : OpenJDK 64-Bit Server VM
+JVM version        : 19.0.2+7-44
+JVM info           : mixed mode, sharing
+OS name            : Mac OS X
+OS version         : 13.2.1
+
+
+You are seeing this disclaimer because Mockito is configured to create inlined mocks.
+You can learn about inline mocks and their limitations under item #39 of the Mockito class javadoc.
+
+Underlying exception : org.mockito.exceptions.base.MockitoException: Could not modify all classes [class java.lang.Object, class com.parkit.parkingsystem.util.InputReaderUtil]
+Caused by: org.mockito.exceptions.base.MockitoException: Could not modify all classes [class java.lang.Object, class com.parkit.parkingsystem.util.InputReaderUtil]
+Caused by: java.lang.IllegalStateException: 
+
+Byte Buddy could not instrument all classes within the mock's type hierarchy
+
+This problem should never occur for javac-compiled classes. This problem has been observed for classes that are:
+ - Compiled by older versions of scalac
+ - Classes that are part of the Android distribution
+Caused by: java.lang.IllegalArgumentException: Java 19 (63) is not supported by the current version of Byte Buddy which officially supports Java 18 (62) - update Byte Buddy or set net.bytebuddy.experimental as a VM property
+
+processIncomingBikeWithoutAvailableSpotTest  Time elapsed: 0.108 s  <<< ERROR!
+org.mockito.exceptions.base.MockitoException: 
+
+Mockito cannot mock this class: class com.parkit.parkingsystem.util.InputReaderUtil.
+
+If you're not sure why you're getting this error, please report to the mailing list.
+
+
+Java               : 19
+JVM vendor name    : Oracle Corporation
+JVM vendor version : 19.0.2+7-44
+JVM name           : OpenJDK 64-Bit Server VM
+JVM version        : 19.0.2+7-44
+JVM info           : mixed mode, sharing
+OS name            : Mac OS X
+OS version         : 13.2.1
+
+
+You are seeing this disclaimer because Mockito is configured to create inlined mocks.
+You can learn about inline mocks and their limitations under item #39 of the Mockito class javadoc.
+
+Underlying exception : org.mockito.exceptions.base.MockitoException: Could not modify all classes [class java.lang.Object, class com.parkit.parkingsystem.util.InputReaderUtil]
+Caused by: org.mockito.exceptions.base.MockitoException: Could not modify all classes [class java.lang.Object, class com.parkit.parkingsystem.util.InputReaderUtil]
+Caused by: java.lang.IllegalStateException: 
+
+Byte Buddy could not instrument all classes within the mock's type hierarchy
+
+This problem should never occur for javac-compiled classes. This problem has been observed for classes that are:
+ - Compiled by older versions of scalac
+ - Classes that are part of the Android distribution
+Caused by: java.lang.IllegalArgumentException: Java 19 (63) is not supported by the current version of Byte Buddy which officially supports Java 18 (62) - update Byte Buddy or set net.bytebuddy.experimental as a VM property
+
+processIncomingBikeWithAvailableSpotTest  Time elapsed: 0.133 s  <<< ERROR!
+org.mockito.exceptions.base.MockitoException: 
+
+Mockito cannot mock this class: class com.parkit.parkingsystem.util.InputReaderUtil.
+
+If you're not sure why you're getting this error, please report to the mailing list.
+
+
+Java               : 19
+JVM vendor name    : Oracle Corporation
+JVM vendor version : 19.0.2+7-44
+JVM name           : OpenJDK 64-Bit Server VM
+JVM version        : 19.0.2+7-44
+JVM info           : mixed mode, sharing
+OS name            : Mac OS X
+OS version         : 13.2.1
+
+
+You are seeing this disclaimer because Mockito is configured to create inlined mocks.
+You can learn about inline mocks and their limitations under item #39 of the Mockito class javadoc.
+
+Underlying exception : org.mockito.exceptions.base.MockitoException: Could not modify all classes [class java.lang.Object, class com.parkit.parkingsystem.util.InputReaderUtil]
+Caused by: org.mockito.exceptions.base.MockitoException: Could not modify all classes [class java.lang.Object, class com.parkit.parkingsystem.util.InputReaderUtil]
+Caused by: java.lang.IllegalStateException: 
+
+Byte Buddy could not instrument all classes within the mock's type hierarchy
+
+This problem should never occur for javac-compiled classes. This problem has been observed for classes that are:
+ - Compiled by older versions of scalac
+ - Classes that are part of the Android distribution
+Caused by: java.lang.IllegalArgumentException: Java 19 (63) is not supported by the current version of Byte Buddy which officially supports Java 18 (62) - update Byte Buddy or set net.bytebuddy.experimental as a VM property
+
+processIncomingBusFail  Time elapsed: 0.125 s  <<< ERROR!
+org.mockito.exceptions.base.MockitoException: 
+
+Mockito cannot mock this class: class com.parkit.parkingsystem.util.InputReaderUtil.
+
+If you're not sure why you're getting this error, please report to the mailing list.
+
+
+Java               : 19
+JVM vendor name    : Oracle Corporation
+JVM vendor version : 19.0.2+7-44
+JVM name           : OpenJDK 64-Bit Server VM
+JVM version        : 19.0.2+7-44
+JVM info           : mixed mode, sharing
+OS name            : Mac OS X
+OS version         : 13.2.1
+
+
+You are seeing this disclaimer because Mockito is configured to create inlined mocks.
+You can learn about inline mocks and their limitations under item #39 of the Mockito class javadoc.
+
+Underlying exception : org.mockito.exceptions.base.MockitoException: Could not modify all classes [class java.lang.Object, class com.parkit.parkingsystem.util.InputReaderUtil]
+Caused by: org.mockito.exceptions.base.MockitoException: Could not modify all classes [class java.lang.Object, class com.parkit.parkingsystem.util.InputReaderUtil]
+Caused by: java.lang.IllegalStateException: 
+
+Byte Buddy could not instrument all classes within the mock's type hierarchy
+
+This problem should never occur for javac-compiled classes. This problem has been observed for classes that are:
+ - Compiled by older versions of scalac
+ - Classes that are part of the Android distribution
+Caused by: java.lang.IllegalArgumentException: Java 19 (63) is not supported by the current version of Byte Buddy which officially supports Java 18 (62) - update Byte Buddy or set net.bytebuddy.experimental as a VM property
+
+processExitingVehicleTest  Time elapsed: 0.159 s  <<< ERROR!
+org.mockito.exceptions.base.MockitoException: 
+
+Mockito cannot mock this class: class com.parkit.parkingsystem.util.InputReaderUtil.
+
+If you're not sure why you're getting this error, please report to the mailing list.
+
+
+Java               : 19
+JVM vendor name    : Oracle Corporation
+JVM vendor version : 19.0.2+7-44
+JVM name           : OpenJDK 64-Bit Server VM
+JVM version        : 19.0.2+7-44
+JVM info           : mixed mode, sharing
+OS name            : Mac OS X
+OS version         : 13.2.1
+
+
+You are seeing this disclaimer because Mockito is configured to create inlined mocks.
+You can learn about inline mocks and their limitations under item #39 of the Mockito class javadoc.
+
+Underlying exception : org.mockito.exceptions.base.MockitoException: Could not modify all classes [class java.lang.Object, class com.parkit.parkingsystem.util.InputReaderUtil]
+Caused by: org.mockito.exceptions.base.MockitoException: Could not modify all classes [class java.lang.Object, class com.parkit.parkingsystem.util.InputReaderUtil]
+Caused by: java.lang.IllegalStateException: 
+
+Byte Buddy could not instrument all classes within the mock's type hierarchy
+
+This problem should never occur for javac-compiled classes. This problem has been observed for classes that are:
+ - Compiled by older versions of scalac
+ - Classes that are part of the Android distribution
+Caused by: java.lang.IllegalArgumentException: Java 19 (63) is not supported by the current version of Byte Buddy which officially supports Java 18 (62) - update Byte Buddy or set net.bytebuddy.experimental as a VM property
+
+updateTicketFailExitingVehicle  Time elapsed: 0.136 s  <<< ERROR!
+org.mockito.exceptions.base.MockitoException: 
+
+Mockito cannot mock this class: class com.parkit.parkingsystem.util.InputReaderUtil.
+
+If you're not sure why you're getting this error, please report to the mailing list.
+
+
+Java               : 19
+JVM vendor name    : Oracle Corporation
+JVM vendor version : 19.0.2+7-44
+JVM name           : OpenJDK 64-Bit Server VM
+JVM version        : 19.0.2+7-44
+JVM info           : mixed mode, sharing
+OS name            : Mac OS X
+OS version         : 13.2.1
+
+
+You are seeing this disclaimer because Mockito is configured to create inlined mocks.
+You can learn about inline mocks and their limitations under item #39 of the Mockito class javadoc.
+
+Underlying exception : org.mockito.exceptions.base.MockitoException: Could not modify all classes [class java.lang.Object, class com.parkit.parkingsystem.util.InputReaderUtil]
+Caused by: org.mockito.exceptions.base.MockitoException: Could not modify all classes [class java.lang.Object, class com.parkit.parkingsystem.util.InputReaderUtil]
+Caused by: java.lang.IllegalStateException: 
+
+Byte Buddy could not instrument all classes within the mock's type hierarchy
+
+This problem should never occur for javac-compiled classes. This problem has been observed for classes that are:
+ - Compiled by older versions of scalac
+ - Classes that are part of the Android distribution
+Caused by: java.lang.IllegalArgumentException: Java 19 (63) is not supported by the current version of Byte Buddy which officially supports Java 18 (62) - update Byte Buddy or set net.bytebuddy.experimental as a VM property
+

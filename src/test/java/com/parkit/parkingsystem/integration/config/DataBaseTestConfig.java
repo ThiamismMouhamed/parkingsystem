@@ -14,7 +14,7 @@ public class DataBaseTestConfig extends DataBaseConfig {
         logger.info("Create DB connection");
         Class.forName("com.mysql.cj.jdbc.Driver");
         return DriverManager.getConnection(
-                "jdbc:mysql://127.0.0.1:8889/test","root","root");
+                "jdbc:mysql://127.0.0.1:8889/test","mvn ","root");
     }
 
     public void closeConnection(Connection con){
